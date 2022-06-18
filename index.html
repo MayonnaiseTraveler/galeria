@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Galeria de Imagens</title>
+    <link href="./css/styles.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" defer src="./js/animacao.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+</head>
+
+<body>
+    <main class="round">
+        <header id="navbar" class="column">
+            <ul>
+                <li><a href="index.html#carrosel">ﭒ Sobre</a></li>
+                <li><a href="/"> Galeria</a></li>
+                <li><a href="/"> Rodapé</a></li>
+            </ul>
+            <h1>Galeria de Artes</h1>
+
+        </header>
+        <section class="container">
+            <section id="carrousel">
+
+                <a class="imagecontainer" href="">
+                    <img src="img/img0.jpg" alt="gif">
+                </a>
+                <a class="imagecontainer" href="">
+                    <img src="img/img1.jpg" alt="gif">
+                </a>
+                <a class="imagecontainer" href="">
+                    <img src="img/img2.jpg" alt="gif">
+                </a>
+                <a class="imagecontainer" href="">
+                    <img src="img/img3.jpg" alt="gif">
+                </a>
+                <a class="imagecontainer" href="">
+                    <img src="img/img4.jpg" alt="gif">
+                </a>
+
+
+            </section>
+
+            <script src="./js/carrousel.js" onload="move('#carrousel','imagecontainer',false,0,0)"></script>
+            <button id="btnright" onclick="move('#carrousel','imagecontainer',false,1,0);"></button>
+            <button id="btnleft" onclick="move('#carrousel','imagecontainer',false,-1,0);"></button>
+
+
+        </section>
+        </article>
+
+        <article id="about">
+            <h3>Sobre este website</h3>
+            <p>
+                Este website é uma galeria de artes cênicas virtual que reune artistas brasileiros do sul catarinense...
+                Este website é uma galeria de artes cênicas virtual que reune artistas brasileiros do sul catarinense...
+                Este website é uma galeria de artes cênicas virtual que reune artistas brasileiros do sul catarinense...
+                Este website é uma galeria de artes cênicas virtual que reune artistas brasileiros do sul catarinense...
+            </p>
+        </article>
+
+        <article id="gallery">
+            <header class="round">
+                <div id="dropdown">
+                    <button id="btn-gallery"></button>
+                    <div id="btn-gallery-dropdown">
+                        <p>1 coluna</p>
+                        <p>2 colunas</p>
+                    </div>
+                </div>
+                <h3>Galeria</h3>
+            </header>
+            <section>
+                <img src="img/img6.jpg" />
+                <p>Legenda</p>
+            </section>
+            <section>
+                <img src="img/img6.jpg" />
+                <p>Legenda</p>
+            </section>
+            <section>
+                <img src="img/img6.jpg" />
+                <p>Legenda</p>
+            </section>
+        </article>
+        <footer>
+            <section>
+                <ul>
+                    <li>Copyright </li>
+                    <li>Última Atualização:</li>
+                    <li></li>
+                </ul>
+            </section>
+
+            <section>
+                <ul>
+                    <li>Email:</li>
+                    <li>Celular:</li>
+                    <li>Telefone:</li>
+                    <li></li>
+                </ul>
+            </section>
+            <section>
+                <ul>
+                    <li>Voltar ao topo</li>
+                    <li>opção</li>
+                    <li>opção</li>
+                </ul>
+            </section>
+        </footer>
+    </main>
+
+</body>
+
+</html>

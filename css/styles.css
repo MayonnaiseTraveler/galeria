@@ -40,12 +40,13 @@ p {
 body {
     margin: 0.5vw 10vw 10vw 10vw;
     text-align: center;
-    background-image: linear-gradient(to bottom right,
+    background-color:rgb(196, 211, 211);
+    /*background-image: linear-gradient(to bottom right,
             #ff9898,
             #ffbcbc,
             #f7f7f7,
             #c0f9ff,
-            #acf7ff);
+            #acf7ff);*/
     background-size: auto;
     background-attachment: fixed;
     color: var(--text-color);

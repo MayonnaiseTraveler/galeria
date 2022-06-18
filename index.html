@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>Galeria de Imagens</title>
     <link href="./css/styles.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" defer src="./js/animacao.js"></script>
+    <script type="text/javascript" src="./js/gallery.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
 </head>
 
@@ -13,9 +13,9 @@
     <main class="round">
         <header id="navbar" class="column">
             <ul>
-                <li><a href="index.html#carrosel">ﭒ Sobre</a></li>
-                <li><a href="/"> Galeria</a></li>
-                <li><a href="/"> Rodapé</a></li>
+                <li><a href="/index.html#about">ﭒ Sobre</a></li>
+                <li><a href="/index.html#gallery"> Galeria</a></li>
+                <li><a href="/index.html#footer"> Rodapé</a></li>
             </ul>
             <h1>Galeria de Artes</h1>
 
@@ -23,26 +23,27 @@
         <section class="container">
             <section id="carrousel">
 
-                <a class="imagecontainer" href="">
-                    <img src="img/img0.jpg" alt="gif">
+                <a class="imagecontainer" href="#0">
+                    <img src="img/img0.jpg" alt="img0">
                 </a>
-                <a class="imagecontainer" href="">
-                    <img src="img/img1.jpg" alt="gif">
+                <a class="imagecontainer" href="#1">
+                    <img src="img/img1.jpg" alt="img1">
                 </a>
-                <a class="imagecontainer" href="">
-                    <img src="img/img2.jpg" alt="gif">
+                <a class="imagecontainer" href="#2">
+                    <img src="img/img2.jpg" alt="img2">
                 </a>
-                <a class="imagecontainer" href="">
-                    <img src="img/img3.jpg" alt="gif">
+                <a class="imagecontainer" href="#3">
+                    <img src="img/img3.jpg" alt="img3">
                 </a>
-                <a class="imagecontainer" href="">
-                    <img src="img/img4.jpg" alt="gif">
+                <a class="imagecontainer" href="#4">
+                    <img src="img/img4.jpg" alt="img4">
                 </a>
 
 
             </section>
 
             <script src="./js/carrousel.js" onload="move('#carrousel','imagecontainer',false,0,0)"></script>
+            <script src="./js/carrousel.js" onload="move('#carrousel','imagecontainer',false,1,5000)"></script>
             <button id="btnright" onclick="move('#carrousel','imagecontainer',false,1,0);"></button>
             <button id="btnleft" onclick="move('#carrousel','imagecontainer',false,-1,0);"></button>
 
@@ -58,9 +59,11 @@
                 Este website é uma galeria de artes cênicas virtual que reune artistas brasileiros do sul catarinense...
                 Este website é uma galeria de artes cênicas virtual que reune artistas brasileiros do sul catarinense...
             </p>
+            <hr>
         </article>
 
-        <article id="gallery">
+        <section id="gallery">
+
             <header class="round">
                 <div id="dropdown">
                     <button id="btn-gallery"></button>
@@ -71,20 +74,54 @@
                 </div>
                 <h3>Galeria</h3>
             </header>
-            <section>
-                <img src="img/img6.jpg" />
-                <p>Legenda</p>
-            </section>
-            <section>
-                <img src="img/img6.jpg" />
-                <p>Legenda</p>
-            </section>
-            <section>
-                <img src="img/img6.jpg" />
-                <p>Legenda</p>
-            </section>
-        </article>
-        <footer>
+            <article id="0">
+                <img src="img/img0.jpg" alt="img"/>
+                <section class="flex">
+                    <p>Vofan</p>
+                    <p>Digital</p>
+                    <p>Desconhecida</p>
+                </section>
+                <p>A pintura apresenta as personagens Mayoi Hachikuji e Tsubasa Hanekawa da light novel de bakemonogatari.</p>
+            </article>
+            <article id="1">
+                <img src="img/img1.jpg" alt="img"/>
+                <section class="flex">
+                    <p>Vofan</p>
+                    <p>Digital</p>
+                    <p>Desconhecida</p>
+                </section>
+                <p>A pintura apresenta a personagem Tsubasa Hanekawa da light novel de bakemonogatari.</p>
+            </article>
+            <article id="2">
+                <img src="img/img2.jpg" alt="img"/>
+                <section class="flex">
+                    <p>Vofan</p>
+                    <p>Digital</p>
+                    <p>Desconhecida</p>
+                </section>
+                <p>A pintura apresenta a personagem Sengoku Nadeko da light novel de bakemonogatari.</p>
+            </article>
+            <article id="3">
+                <img src="img/img3.jpg" alt="img"/>
+                <section class="flex">
+                    <p>Vofan</p>
+                    <p>Digital</p>
+                    <p>Desconhecida</p>
+                </section>
+                <p>A pintura apresenta a personagem Hitagi senjhougahara da light novel de bakemonogatari.</p>
+            </article>
+            <article id="4">
+                <img src="img/img4.jpg" alt="img"/>
+                <section class="flex">
+                    <p>Vofan</p>
+                    <p>Digital</p>
+                    <p>Desconhecida</p>
+                </section>
+                <p>A pintura apresenta a personagem Shinobu Oshino da light novel de Kizumonogatari.</p>
+            </article>
+        </section>
+
+        <footer id="footer">
             <section>
                 <ul>
                     <li>Copyright </li>

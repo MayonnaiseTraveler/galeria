@@ -285,6 +285,8 @@ button {
 }
 
 .art-small{
+    margin:0;
+    margin-bottom: 2vw;
     display:inline-block;
     max-width:45%;
     box-sizing: content-box;
@@ -292,7 +294,16 @@ button {
 
 .art-small>p, .art-small>section{
     padding:0vw 2vw;
+
 }
+.art-small>p{
+    min-height:6vw;
+    max-height:6vw;
+    overflow-y:scroll;
+    scrollbar-track-color: transparent;
+    scrollbar-color: var(--main-fg-color) transparent;
+}
+
 
 .art-small>img{
     padding:0;

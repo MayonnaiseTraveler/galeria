@@ -1,7 +1,6 @@
 # TODO:
 * - [ ] Slides
-* - [ ] Reorganize Css and add comments
-* - [ ] Reorganize JS
+* - [ ] Add missing text
 * - [ ] add image alts
 * - [ ] image title?
 * - [ ] fix footer
@@ -13,5 +12,7 @@
 
 # DONE:
 
+* - [x] Reorganize Css and add comments
+* - [x] Reorganize JS
 * - [x] more mobile optimization
 * - [x] iamge with 100% width when on one column mode

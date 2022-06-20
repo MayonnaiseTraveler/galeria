@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-/* CSS Document */
-
 /* Variables*/
 
 :root {
@@ -41,12 +39,6 @@ body {
     margin: 0.5vw 10vw 10vw 10vw;
     text-align: center;
     background-color: rgb(196, 211, 211);
-    /*background-image: linear-gradient(to bottom right,
-            #ff9898,
-            #ffbcbc,
-            #f7f7f7,
-            #c0f9ff,
-            #acf7ff);*/
     background-size: auto;
     background-attachment: fixed;
     color: var(--text-color);
@@ -79,14 +71,25 @@ button {
     color: var(--alt-text-color);
 }
 
+ul {
+    padding: 0;
+    list-style-type: none;
+    text-align: left;
+}
+
+button {
+    font-family: "Sauce Code Pro" !important;
+}
+
 main {
     background-color: var(--main-bg-color);
 }
 
-main>article,
-main>header,
-#gallery {
-    padding: 0vw 8vw 1vw 8vw;
+footer {
+    padding: 0 5vw;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--alt-bg-color);
 }
 
 .flex {
@@ -102,19 +105,69 @@ main>header,
     justify-content: center;
 }
 
+main>article,
+main>header,
+#gallery {
+    /* padding geral de divs e etc*/ 
+    padding: 0vw 8vw 1vw 8vw;
+}
+
+header {
+    /*header que tem as coisas da navbar*/ 
+    justify-content: space-between;
+    align-items: center;
+    background: var(--main-bg-color);
+    text-align: center;
+}
+
+/* NavBar Stuff */
+
+#navbar>h1 {
+    font-weight: 1000;
+    font-family: "Master of Break";
+    letter-spacing: 0.8vw;
+    margin: 0 0 1vw 0;
+}
+
+#navbar ul li {
+    margin: 0.5vw;
+}
+
+#navbar ul {
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0.5vw;
+    display: flex;
+}
+
+#navbar ul li a {
+    font-size: 1vw;
+    padding: 0.4vw;
+    border-style: solid;
+    border-width: 0;
+    border-radius: 0.8vw;
+    font-family: "Nerd Font";
+    text-decoration: none;
+    color: var(--main-fg-color);
+}
+
+#navbar ul li a:hover {
+    font-family: "Nerd Font";
+    color: white;
+    background-color: var(--main-fg-color);
+}
+
 /* Carrosel */
 .container {
+    /* Todos os outros items do carrosel ficam aqui dentro */ 
     overflow: hidden;
     border-radius: 0;
     position: relative;
     height: fit-content;
 }
 
-button {
-    font-family: "Sauce Code Pro" !important;
-}
-
 #carrousel {
+    /* Todas as imagens ficam aqui dentro*/ 
     background-color: #e9e9e960;
     min-height: 40vw;
     max-height: 40vw;
@@ -161,11 +214,8 @@ button {
     cursor: pointer;
 }
 
-#about>p {
-    padding: 1vw 5vw;
-}
-
 .imagecontainer {
+    /*section que tem uma imagem dentro*/
     object-fit: cover;
     box-sizing: border-box;
     /*position: 50% 30%;*/
@@ -178,6 +228,7 @@ button {
 }
 
 .imagecontainer>img {
+    /*A imagem dentro da section*/ 
     max-width: 100%;
     min-height: 50vw;
     object-fit: cover;
@@ -186,41 +237,18 @@ button {
 }
 
 .imagecontainer:hover {
+    /*dar um brilho extra quando o usuario passar o mouse*/
     filter: brightness(1.2);
     max-height: 105%;
 }
 
-/* Navbar */
+/*About Section */ 
 
-#navbar>h1 {
-    font-weight: 1000;
-    font-family: "Master of Break";
-    letter-spacing: 0.8vw;
-    margin: 0 0 1vw 0;
+#about>p {
+    padding: 1vw 5vw;
 }
 
-#navbar ul li {
-    margin: 0.5vw;
-}
-
-#navbar ul li a {
-    font-size: 1vw;
-    padding: 0.4vw;
-    border-style: solid;
-    border-width: 0;
-    border-radius: 0.8vw;
-    font-family: "Nerd Font";
-    text-decoration: none;
-    color: var(--main-fg-color);
-}
-
-#navbar ul li a:hover {
-    font-family: "Nerd Font";
-    color: white;
-    background-color: var(--main-fg-color);
-}
-
-/*  Gallery*/
+/*  Gallery General Stuff*/
 
 #gallery>header {
     justify-content: space-between;
@@ -228,6 +256,7 @@ button {
 }
 
 #gallery>article {
+    /* Dar aquele aspecto de "cartão" moderno de ui mobile */ 
     border-color: var(--main-fg-color);
     border-radius: 1vw;
     border-width: 2px;
@@ -242,6 +271,7 @@ button {
 }
 
 .autor {
+    /*por padrão o texto da obra é exibido*/ 
     display: none;
 }
 
@@ -259,17 +289,71 @@ button {
     max-height: 100%;
 }
 
-.art-big>section>p {
-    font-family: "Nerd font";
+#gallery>header {
+    /* header que tem o botão de dropdown e o titulo da galeria*/ 
+    display: flex;
 }
 
+/* Menu Dropdown da galerya*/ 
+
+#btn-gallery {
+    z-index: 9998; /*só pra deixar o botão na frente de tudo de certeza*/ 
+    position: relative;
+    border-style: solid;
+    border-width: 0;
+    border-radius: 0.5vw;
+    background-color: var(--main-bg-color);
+    font-family: "Nerd font" !important;
+    font-size: 3vw;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#btn-gallery-dropdown {
+    z-index: 9999; /* pro menu dropdown ficar na frente do botão*/ 
+    box-shadow: 0.4vw 0.4vw 0.5vw rgba(0, 0, 0, 0.346);
+    border-radius: 2vw;
+    border-top-left-radius: 0;
+    overflow: hidden;
+    display: none;
+    position: absolute;
+    background-color: var(--main-bg-color);
+    width: auto;
+    z-index: 1;
+}
+
+#btn-gallery-dropdown p {
+    /* items dentro do dropdown*/
+    margin: 0;
+    padding: 2vw;
+    display: block;
+}
+
+#btn-gallery-dropdown p:hover {
+    cursor: pointer;
+    color: var(--alt-fg-color);
+    background-color: var(--alt-bg-color);
+}
+
+#btn-gallery-dropdown p:active {
+    color: var(--main-fg-color);
+    background: rgb(255, 252, 252);
+}
+
+#dropdown:hover #btn-gallery {
+    cursor: pointer;
+    color: var(--main-fg-color);
+    border-bottom-left-radius: 0;
+}
+
+/* Gallery Metadata */ 
 .metadata {
+    /* div que tem os dados de nome do autor, ferramenta, e data da obra*/ 
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     padding: 0vw 2vw;
     margin: 0 1vw;
-
 }
 
 .artist,
@@ -301,17 +385,7 @@ button {
     content: " Data: ";
 }
 
-.art-small>.metadata>div>.artist::before {
-    content: " ";
-}
-
-.art-small>.metadata>div>.tool::before {
-    content: " ";
-}
-
-.art-small>.metadata>.date::before {
-    content: " ";
-}
+/* Gallery Buttons */ 
 
 .buttons {
     display: flex;
@@ -319,17 +393,8 @@ button {
     justify-content: space-between;
 }
 
-.art-small>.autor,
-.art-small>.obra {
-    text-align: left;
-    margin: .5vw 1.5vw;
-}
-
-.art-small>.buttons {
-    margin: 0 1vw;
-}
-
 .buttons>button {
+    /*botões para alternar entre texto da obra e texto do artista */ 
     border-radius: .5vw;
     background-color: var(--main-bg-color);
     border-color: var(--main-fg-color);
@@ -349,14 +414,7 @@ button {
     border-color: var(--alt-bg-color);
 }
 
-.art-big {
-    margin: 1vw 0;
-}
-
-.art-big>img {
-    margin-top: 2vw;
-}
-
+/* Gallery art-small*/ 
 .art-small {
     margin: 0;
     margin-bottom: 2vw;
@@ -392,75 +450,42 @@ button {
     box-sizing: border-box;
 }
 
+.art-small>.metadata>div>.artist::before {
+    content: " ";
+}
+
+.art-small>.metadata>div>.tool::before {
+    content: " ";
+}
+
+.art-small>.metadata>.date::before {
+    content: " ";
+}
+
+.art-small>.autor,
+.art-small>.obra {
+    text-align: left;
+    margin: .5vw 1.5vw;
+}
+
+.art-small>.buttons {
+    margin: 0 1vw;
+}
+
+/* Gallery art-big */ 
+.art-big>section>p {
+    font-family: "Nerd font";
+}
+
+.art-big {
+    margin: 1vw 0;
+}
+
+.art-big>img {
+    margin-top: 2vw;
+}
 .art-big>p {
     padding: 1vw 3vw;
-}
-
-#gallery>header {
-    display: flex;
-}
-
-#btn-gallery {
-    z-index: 9998;
-    position: relative;
-    border-style: solid;
-    border-width: 0;
-    border-radius: 0.5vw;
-    background-color: var(--main-bg-color);
-    font-family: "Nerd font" !important;
-    font-size: 3vw;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-#btn-gallery-dropdown {
-    z-index: 9999;
-    box-shadow: 0.4vw 0.4vw 0.5vw rgba(0, 0, 0, 0.346);
-    border-radius: 2vw;
-    border-top-left-radius: 0;
-    overflow: hidden;
-    display: none;
-    position: absolute;
-    background-color: var(--main-bg-color);
-    width: auto;
-    z-index: 1;
-}
-
-#btn-gallery-dropdown p {
-    margin: 0;
-    padding: 2vw;
-    display: block;
-}
-
-#btn-gallery-dropdown p:hover {
-    cursor: pointer;
-    color: var(--alt-fg-color);
-    background-color: var(--alt-bg-color);
-}
-
-#btn-gallery-dropdown p:active {
-    color: var(--main-fg-color);
-    background: rgb(255, 252, 252);
-}
-
-#dropdown:hover #btn-gallery {
-    cursor: pointer;
-    color: var(--main-fg-color);
-    border-bottom-left-radius: 0;
-}
-
-header {
-    justify-content: space-between;
-    align-items: center;
-    background: var(--main-bg-color);
-    text-align: center;
-}
-
-#navbar ul {
-    text-decoration: none;
-    list-style-type: none;
-    margin: 0.5vw;
-    display: flex;
 }
 
 .art-big>img {
@@ -469,21 +494,9 @@ header {
     max-height: 80vh;
 }
 
-footer {
-    padding: 0 5vw;
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--alt-bg-color);
-}
-
-ul {
-    padding: 0;
-    list-style-type: none;
-    text-align: left;
-}
-
 @media only screen and (max-width: 1100px) {
 
+    /* General Stuff */ 
     h1 {
         font-size: 7vw;
     }
@@ -515,12 +528,21 @@ ul {
         margin: 0;
     }
 
+    main>article,
+    main>header,
+    #gallery {
+        padding: 2vw;
+    }
+
+    /* Carrosel */ 
     #carrousel {
+        /* esse carrosel tem os containers com as imagens*/ 
         min-height: 80vw;
         max-height: 80vw;
     }
 
     .imagecontainer {
+        /*as imagens vão dentro desse container*/ 
         object-fit: cover;
         min-height: 80vw;
         max-height: 100vh;
@@ -528,6 +550,7 @@ ul {
     }
 
     .imagecontainer>img {
+        /* aqui meche nas imagem de vdd*/ 
         max-width: 100%;
         min-height: 80vw;
         object-fit: cover;
@@ -535,6 +558,50 @@ ul {
         min-width: 80vw;
     }
 
+    #btnright,
+    #btnleft {
+        font-size: 5vw;
+        width: 7vw;
+    }
+
+    /* Navbar */
+    #navbar ul li a {
+        padding: 1.5vw;
+        border-radius: 3vw;
+        font-size: 5vw;
+    }
+
+    #navbar h1 {
+        letter-spacing: 1.5vw;
+        font-size: 8vw;
+        margin: 4vw;
+    }
+
+    /* Gallery */
+    #gallery>article {
+        margin-bottom: 3vw;
+    }
+
+    #btn-gallery {
+        font-size: 8vw;
+    }
+    
+    .buttons>button {
+
+        font-family: "Nerd font" !important;
+        padding: 2vw;
+        width: 10vw;
+        height: 10vw;
+        border-radius: 3vw;
+    }
+    
+    .autor,
+    .obra {
+        text-align: left !important;
+        margin: 1vw 3vw;
+    }
+
+    /* Gallery metadata */  
     .artist,
     .tool,
     .date {
@@ -563,6 +630,30 @@ ul {
         content: ' ';
     }
 
+    /* gallery art-small*/ 
+
+    .art-small>p {
+        font-size: 3vw;
+        max-height: 25vw;
+    }
+
+    .art-small>img {
+        cursor: pointer;
+        min-width: 100%;
+        min-height: 40vw;
+    }
+    
+    .art-small>.metadata,
+    .art-small>.buttons {
+        max-width: none;
+        margin: 2vw;
+    }
+    .art-small>.buttons>button {
+        padding: 0;
+        width: 8vw;
+        height: 8vw;
+    }
+
     .art-small>.metadata {
         flex-direction: column;
     }
@@ -571,36 +662,7 @@ ul {
         text-align: left;
     }
 
-    .buttons>button {
-
-        font-family: "Nerd font" !important;
-        padding: 2vw;
-        width: 10vw;
-        height: 10vw;
-        border-radius: 3vw;
-    }
-
-    main>article,
-    main>header,
-    #gallery {
-        padding: 2vw;
-    }
-
-    #gallery>article {
-        margin-bottom: 3vw;
-    }
-
-    .art-small>.metadata,
-    .art-small>.buttons {
-        max-width: none;
-        margin: 2vw;
-    }
-
-    .autor,
-    .obra {
-        text-align: left !important;
-        margin: 1vw 3vw;
-    }
+    /*Gallery art-big */ 
 
     .art-big>img {
         cursor: pointer;
@@ -608,42 +670,6 @@ ul {
         max-height: 70vh;
     }
     
-    .art-small>img {
-        cursor: pointer;
-        min-width: 100%;
-        min-height: 40vw;
-    }
 
-    .art-small>.buttons>button {
-        padding: 0;
-        width: 8vw;
-        height: 8vw;
-    }
-
-    .art-small>p {
-        font-size: 3vw;
-        max-height: 25vw;
-    }
-
-    #btn-gallery {
-        font-size: 8vw;
-    }
-
-    #btnright,
-    #btnleft {
-        font-size: 5vw;
-        width: 7vw;
-    }
-
-    #navbar ul li a {
-        padding: 1.5vw;
-        border-radius: 3vw;
-        font-size: 5vw;
-    }
-
-    #navbar h1 {
-        letter-spacing: 1.5vw;
-        font-size: 8vw;
-        margin: 4vw;
-    }
+    
 }

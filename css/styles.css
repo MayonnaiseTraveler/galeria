@@ -532,10 +532,16 @@ header {
         font-size: 4.8vw;
     }
     
+
     p,
     li {
         font-size: 4vw;
         color: var(--alt-text-color);
+    }
+
+    hr{
+        max-width: 88vw;
+        width:100%;
     }
 
     body {
@@ -586,6 +592,20 @@ header {
     #btnleft {
         font-size: 5vw;
         width: 7vw;
+    }
+
+    /*About Section */ 
+    #about{
+        margin-top: 2vw;
+    }
+    #about>p,#about>ol,#about>h4{
+        margin:2.5vw 6vw;
+        text-align: left;
+        padding:0;
+    }
+    #about>ol{
+        margin:3vw 18vw;
+
     }
 
     /* Navbar */

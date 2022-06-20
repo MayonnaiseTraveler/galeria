@@ -64,9 +64,14 @@ h5 {
     font-size: 1.25vw;
 }
 
-h1,h2,h3,h4,h5{
-        margin:.5vw;
-    }
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: .5vw;
+}
+
 p,
 li,
 button {
@@ -79,8 +84,9 @@ ul {
     list-style-type: none;
     text-align: left;
 }
-hr{
-    width:90%;
+
+hr {
+    width: 90%;
 }
 
 button {
@@ -114,12 +120,12 @@ footer {
 main>article,
 main>header,
 #gallery {
-    /* padding geral de divs e etc*/ 
+    /* padding geral de divs e etc*/
     padding: 0vw 8vw 1vw 8vw;
 }
 
 header {
-    /*header que tem as coisas da navbar*/ 
+    /*header que tem as coisas da navbar*/
     justify-content: space-between;
     align-items: center;
     background: var(--main-bg-color);
@@ -165,7 +171,7 @@ header {
 
 /* Carrosel */
 .container {
-    /* Todos os outros items do carrosel ficam aqui dentro */ 
+    /* Todos os outros items do carrosel ficam aqui dentro */
     overflow: hidden;
     border-radius: 0;
     position: relative;
@@ -173,7 +179,7 @@ header {
 }
 
 #carrousel {
-    /* Todas as imagens ficam aqui dentro*/ 
+    /* Todas as imagens ficam aqui dentro*/
     background-color: #e9e9e960;
     min-height: 40vw;
     max-height: 40vw;
@@ -234,7 +240,7 @@ header {
 }
 
 .imagecontainer>img {
-    /*A imagem dentro da section*/ 
+    /*A imagem dentro da section*/
     max-width: 100%;
     min-height: 50vw;
     object-fit: cover;
@@ -248,17 +254,21 @@ header {
     max-height: 105%;
 }
 
-/*About Section */ 
-#about{
+/*About Section */
+#about {
     margin-top: 1vw;
 }
-#about>p,#about>ol,#about>h4{
-    margin:1vw 5vw;
+
+#about>p,
+#about>ol,
+#about>h4 {
+    margin: 1vw 5vw;
     text-align: left;
-    padding:0;
+    padding: 0;
 }
-#about>ol{
-    margin:1vw 9vw;
+
+#about>ol {
+    margin: 1vw 9vw;
 
 }
 
@@ -270,7 +280,7 @@ header {
 }
 
 #gallery>article {
-    /* Dar aquele aspecto de "cartão" moderno de ui mobile */ 
+    /* Dar aquele aspecto de "cartão" moderno de ui mobile */
     border-color: var(--main-fg-color);
     border-radius: 1vw;
     border-width: 2px;
@@ -285,7 +295,7 @@ header {
 }
 
 .obra {
-    /*por padrão o texto do autor é exibido*/ 
+    /*por padrão o texto do autor é exibido*/
     display: none;
 }
 
@@ -304,14 +314,15 @@ header {
 }
 
 #gallery>header {
-    /* header que tem o botão de dropdown e o titulo da galeria*/ 
+    /* header que tem o botão de dropdown e o titulo da galeria*/
     display: flex;
 }
 
-/* Menu Dropdown da galerya*/ 
+/* Menu Dropdown da galerya*/
 
 #btn-gallery {
-    z-index: 9998; /*só pra deixar o botão na frente de tudo de certeza*/ 
+    z-index: 9998;
+    /*só pra deixar o botão na frente de tudo de certeza*/
     position: relative;
     border-style: solid;
     border-width: 0;
@@ -324,7 +335,8 @@ header {
 }
 
 #btn-gallery-dropdown {
-    z-index: 9999; /* pro menu dropdown ficar na frente do botão*/ 
+    z-index: 9999;
+    /* pro menu dropdown ficar na frente do botão*/
     box-shadow: 0.4vw 0.4vw 0.5vw rgba(0, 0, 0, 0.346);
     border-radius: 2vw;
     border-top-left-radius: 0;
@@ -360,9 +372,9 @@ header {
     border-bottom-left-radius: 0;
 }
 
-/* Gallery Metadata */ 
+/* Gallery Metadata */
 .metadata {
-    /* div que tem os dados de nome do autor, ferramenta, e data da obra*/ 
+    /* div que tem os dados de nome do autor, ferramenta, e data da obra*/
     display: flex;
     align-items: baseline;
     justify-content: space-between;
@@ -382,24 +394,28 @@ header {
 }
 
 .artist::before {
+
+    font-family: "Nerd Font";
     font-weight: 600;
     color: var(--main-fg-color);
     content: " Artista: ";
 }
 
 .tool::before {
+    font-family: "Nerd Font";
     font-weight: 600;
     color: var(--alt-fg-color);
     content: " Meio: ";
 }
 
 .date::before {
+    font-family: "Nerd Font";
     font-weight: 600;
     color: var(--main-text-color);
     content: " Data: ";
 }
 
-/* Gallery Buttons */ 
+/* Gallery Buttons */
 
 .buttons {
     display: flex;
@@ -408,7 +424,9 @@ header {
 }
 
 .buttons>button {
-    /*botões para alternar entre texto da obra e texto do artista */ 
+
+    font-family: "Nerd Font";
+    /*botões para alternar entre texto da obra e texto do artista */
     border-radius: .5vw;
     background-color: var(--main-bg-color);
     border-color: var(--main-fg-color);
@@ -428,7 +446,7 @@ header {
     border-color: var(--alt-bg-color);
 }
 
-/* Gallery art-small*/ 
+/* Gallery art-small*/
 .art-small {
     margin: 0;
     margin-bottom: 2vw;
@@ -486,7 +504,7 @@ header {
     margin: 0 1vw;
 }
 
-/* Gallery art-big */ 
+/* Gallery art-big */
 .art-big>section>p {
     font-family: "Nerd font";
 }
@@ -498,6 +516,7 @@ header {
 .art-big>img {
     margin-top: 2vw;
 }
+
 .art-big>p {
     padding: 1vw 3vw;
 }
@@ -510,7 +529,7 @@ header {
 
 @media only screen and (max-width: 1100px) {
 
-    /* General Stuff */ 
+    /* General Stuff */
     h1 {
         font-size: 7vw;
     }
@@ -531,7 +550,7 @@ header {
     h5 {
         font-size: 4.8vw;
     }
-    
+
 
     p,
     li {
@@ -539,23 +558,26 @@ header {
         color: var(--alt-text-color);
     }
 
-    hr{
+    hr {
         max-width: 88vw;
-        width:100%;
+        width: 100%;
     }
 
     body {
         margin: 0;
     }
-    footer{
-        padding:1vw;
+
+    footer {
+        padding: 1vw;
     }
-    footer>section{
-        margin:0 1vw;
+
+    footer>section {
+        margin: 0 1vw;
     }
-    footer>section>ul>li{
+
+    footer>section>ul>li {
         text-align: left;
-        font-size:3vw;
+        font-size: 3vw;
     }
 
     main>article,
@@ -564,15 +586,15 @@ header {
         padding: 2vw;
     }
 
-    /* Carrosel */ 
+    /* Carrosel */
     #carrousel {
-        /* esse carrosel tem os containers com as imagens*/ 
+        /* esse carrosel tem os containers com as imagens*/
         min-height: 80vw;
         max-height: 80vw;
     }
 
     .imagecontainer {
-        /*as imagens vão dentro desse container*/ 
+        /*as imagens vão dentro desse container*/
         object-fit: cover;
         min-height: 80vw;
         max-height: 100vh;
@@ -580,7 +602,7 @@ header {
     }
 
     .imagecontainer>img {
-        /* aqui meche nas imagem de vdd*/ 
+        /* aqui meche nas imagem de vdd*/
         max-width: 100%;
         min-height: 80vw;
         object-fit: cover;
@@ -594,17 +616,21 @@ header {
         width: 7vw;
     }
 
-    /*About Section */ 
-    #about{
+    /*About Section */
+    #about {
         margin-top: 2vw;
     }
-    #about>p,#about>ol,#about>h4{
-        margin:2.5vw 6vw;
+
+    #about>p,
+    #about>ol,
+    #about>h4 {
+        margin: 2.5vw 6vw;
         text-align: left;
-        padding:0;
+        padding: 0;
     }
-    #about>ol{
-        margin:3vw 18vw;
+
+    #about>ol {
+        margin: 3vw 18vw;
 
     }
 
@@ -629,7 +655,7 @@ header {
     #btn-gallery {
         font-size: 8vw;
     }
-    
+
     .buttons>button {
 
         font-family: "Nerd font" !important;
@@ -638,14 +664,14 @@ header {
         height: 10vw;
         border-radius: 3vw;
     }
-    
+
     .autor,
     .obra {
         text-align: left !important;
         margin: 1vw 3vw;
     }
 
-    /* Gallery metadata */  
+    /* Gallery metadata */
     .artist,
     .tool,
     .date {
@@ -674,7 +700,7 @@ header {
         content: ' ';
     }
 
-    /* gallery art-small*/ 
+    /* gallery art-small*/
 
     .art-small>p {
         font-size: 3vw;
@@ -686,12 +712,13 @@ header {
         min-width: 100%;
         min-height: 40vw;
     }
-    
+
     .art-small>.metadata,
     .art-small>.buttons {
         max-width: none;
         margin: 2vw;
     }
+
     .art-small>.buttons>button {
         padding: 0;
         width: 8vw;
@@ -706,14 +733,14 @@ header {
         text-align: left;
     }
 
-    /*Gallery art-big */ 
+    /*Gallery art-big */
 
     .art-big>img {
         cursor: pointer;
         max-width: 95%;
         max-height: 70vh;
     }
-    
 
-    
+
+
 }

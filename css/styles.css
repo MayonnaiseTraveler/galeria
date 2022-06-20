@@ -64,6 +64,9 @@ h5 {
     font-size: 1.25vw;
 }
 
+h1,h2,h3,h4,h5{
+        margin:.5vw;
+    }
 p,
 li,
 button {
@@ -75,6 +78,9 @@ ul {
     padding: 0;
     list-style-type: none;
     text-align: left;
+}
+hr{
+    width:90%;
 }
 
 button {
@@ -243,9 +249,17 @@ header {
 }
 
 /*About Section */ 
+#about{
+    margin-top: 1vw;
+}
+#about>p,#about>ol,#about>h4{
+    margin:1vw 5vw;
+    text-align: left;
+    padding:0;
+}
+#about>ol{
+    margin:1vw 9vw;
 
-#about>p {
-    padding: 1vw 5vw;
 }
 
 /*  Gallery General Stuff*/
@@ -517,7 +531,7 @@ header {
     h5 {
         font-size: 4.8vw;
     }
-
+    
     p,
     li {
         font-size: 4vw;

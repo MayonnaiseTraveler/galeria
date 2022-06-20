@@ -40,7 +40,7 @@ p {
 body {
     margin: 0.5vw 10vw 10vw 10vw;
     text-align: center;
-    background-color:rgb(196, 211, 211);
+    background-color: rgb(196, 211, 211);
     /*background-image: linear-gradient(to bottom right,
             #ff9898,
             #ffbcbc,
@@ -73,7 +73,8 @@ h5 {
 }
 
 p,
-li {
+li,
+button {
     font-size: 1vw;
     color: var(--alt-text-color);
 }
@@ -221,9 +222,9 @@ button {
 
 /*  Gallery*/
 
-#gallery>header{
+#gallery>header {
     justify-content: space-between;
-    width:100%;
+    width: 100%;
 }
 
 #gallery>article {
@@ -240,13 +241,17 @@ button {
     background-color: var(--alt-bg-color);
 }
 
+.autor {
+    display: none;
+}
+
 .round,
 #gallery>article>img {
     border-radius: 1vw;
     overflow: hidden;
 }
 
-#gallery>article:fullscreen img {
+#gallery>article>img :fullscreen {
     border-radius: 0;
     object-fit: contain;
     margin: 0;
@@ -258,25 +263,93 @@ button {
     font-family: "Nerd font";
 }
 
-#gallery>article>section> :nth-child(1)::before {
+.metadata {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0vw 2vw;
+    margin: 0 1vw;
+
+}
+
+.artist,
+.tool {
+    margin: .25vw 1vw;
+    text-align: left;
+}
+
+.date {
+    margin: .25vw 1vw;
+    text-align: right;
+}
+
+.artist::before {
     font-weight: 600;
     color: var(--main-fg-color);
-    content: "Artista: ";
+    content: " Artista: ";
 }
 
-#gallery>article>section> :nth-child(2)::before {
+.tool::before {
     font-weight: 600;
     color: var(--alt-fg-color);
-    content: "Meio: ";
+    content: " Meio: ";
 }
 
-#gallery>article>section> :nth-child(3)::before {
+.date::before {
     font-weight: 600;
     color: var(--main-text-color);
-    content: "Data: ";
+    content: " Data: ";
 }
 
-.art-big{
+.art-small>.metadata>div>.artist::before {
+    content: " ";
+}
+
+.art-small>.metadata>div>.tool::before {
+    content: " ";
+}
+
+.art-small>.metadata>.date::before {
+    content: " ";
+}
+
+.buttons {
+    display: flex;
+    margin: 0 3.8vw;
+    justify-content: space-between;
+}
+
+.art-small>.autor,
+.art-small>.obra {
+    text-align: left;
+    margin: .5vw 1.5vw;
+}
+
+.art-small>.buttons {
+    margin: 0 1vw;
+}
+
+.buttons>button {
+    border-radius: .5vw;
+    background-color: var(--main-bg-color);
+    border-color: var(--main-fg-color);
+    border-width: 0;
+    border-bottom-width: 2px;
+    border-style: solid;
+    padding: .7vw 1vw;
+    color: var(--alt-fg-color);
+}
+
+.buttons>button:hover {
+    background-color: #e3e3e3;
+}
+
+.buttons>button:active {
+    background-color: rgb(199, 199, 199);
+    border-color: var(--alt-bg-color);
+}
+
+.art-big {
     margin: 1vw 0;
 }
 
@@ -284,40 +357,43 @@ button {
     margin-top: 2vw;
 }
 
-.art-small{
-    margin:0;
+.art-small {
+    margin: 0;
     margin-bottom: 2vw;
-    display:inline-block;
-    max-width:45%;
+    display: inline-block;
+    max-width: 45%;
+    min-width: 45%;
     box-sizing: content-box;
 }
 
-.art-small>p, .art-small>section{
-    padding:0vw 2vw;
+.art-small>.metadata {
 
+    padding: 0vw 0vw;
+    margin: 0 1vw;
 }
-.art-small>p{
-    min-height:6vw;
-    max-height:6vw;
-    overflow-y:scroll;
+
+.art-small>p {
+    min-height: 8vw;
+    max-height: 8vw;
+    overflow-y: scroll;
     scrollbar-track-color: transparent;
     scrollbar-color: var(--main-fg-color) transparent;
 }
 
-
-.art-small>img{
-    padding:0;
+.art-small>img {
+    padding: 0;
+    cursor: pointer;
     object-fit: cover;
-    min-width:100%;
-    min-height:25vw;
-    max-width:100%;
-    max-height:25vw;
+    min-width: 100%;
+    min-height: 25vw;
+    max-width: 100%;
+    max-height: 25vw;
     margin: 0 auto;
     box-sizing: border-box;
 }
 
 .art-big>p {
-    padding: 1vw 5vw;
+    padding: 1vw 3vw;
 }
 
 #gallery>header {
@@ -333,8 +409,6 @@ button {
     background-color: var(--main-bg-color);
     font-family: "Nerd font" !important;
     font-size: 3vw;
-    width: 4vw;
-    height: 4vw;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
@@ -359,22 +433,20 @@ button {
 }
 
 #btn-gallery-dropdown p:hover {
-    cursor:pointer;
+    cursor: pointer;
     color: var(--alt-fg-color);
     background-color: var(--alt-bg-color);
 }
-#btn-gallery-dropdown p:active{
+
+#btn-gallery-dropdown p:active {
     color: var(--main-fg-color);
     background: rgb(255, 252, 252);
 }
 
 #dropdown:hover #btn-gallery {
+    cursor: pointer;
     color: var(--main-fg-color);
     border-bottom-left-radius: 0;
-}
-
-#dropdown:hover #btn-gallery-dropdown {
-    display: block;
 }
 
 header {
@@ -393,8 +465,8 @@ header {
 
 .art-big>img {
     cursor: pointer;
-    max-width: 90%;
-    max-height: 70vh;
+    max-width: 100%;
+    max-height: 80vh;
 }
 
 footer {
@@ -413,33 +485,99 @@ ul {
 @media only screen and (max-width: 1100px) {
 
     h1 {
-        font-size: 3.2vw;
+        font-size: 7vw;
     }
 
     h2 {
-        font-size: 2.9vw;
+        font-size: 6vw;
     }
 
     h3 {
-        font-size: 2.6vw;
+        font-size: 5.6vw;
     }
 
-    h4 {
-        font-size: 2.3vw;
+    h4,
+    button {
+        font-size: 5.2vw;
     }
 
     h5 {
-        font-size: 2vw;
+        font-size: 4.8vw;
     }
 
     p,
     li {
-        font-size: 1.8vw;
+        font-size: 4vw;
         color: var(--alt-text-color);
     }
 
     body {
         margin: 0;
+    }
+
+    #carrousel {
+        min-height: 80vw;
+        max-height: 80vw;
+    }
+
+    .imagecontainer {
+        object-fit: cover;
+        min-height: 80vw;
+        max-height: 100vh;
+        min-width: 100%;
+    }
+
+    .imagecontainer>img {
+        max-width: 100%;
+        min-height: 80vw;
+        object-fit: cover;
+        object-position: 50% 50%;
+        min-width: 80vw;
+    }
+
+    .artist,
+    .tool,
+    .date {
+        font-size: 3vw;
+        margin: .5vw;
+    }
+
+    .artist::before {
+        font-family: "Nerd font";
+        font-weight: 600;
+        color: var(--main-fg-color);
+        content: ' ';
+    }
+
+    .tool::before {
+        font-family: "Nerd font";
+        font-weight: 600;
+        color: var(--alt-fg-color);
+        content: ' ';
+    }
+
+    .date::before {
+        font-family: "Nerd font";
+        font-weight: 600;
+        color: var(--main-text-color);
+        content: ' ';
+    }
+
+    .art-small>.metadata {
+        flex-direction: column;
+    }
+
+    .art-small>.metadata>.date {
+        text-align: left;
+    }
+
+    .buttons>button {
+
+        font-family: "Nerd font" !important;
+        padding: 2vw;
+        width: 10vw;
+        height: 10vw;
+        border-radius: 3vw;
     }
 
     main>article,
@@ -452,21 +590,60 @@ ul {
         margin-bottom: 3vw;
     }
 
+    .art-small>.metadata,
+    .art-small>.buttons {
+        max-width: none;
+        margin: 2vw;
+    }
+
+    .autor,
+    .obra {
+        text-align: left !important;
+        margin: 1vw 3vw;
+    }
+
     .art-big>img {
         cursor: pointer;
         max-width: 95%;
         max-height: 70vh;
     }
-    #btn-gallery{
-        font-size: 5vw;;
+    
+    .art-small>img {
+        cursor: pointer;
+        min-width: 100%;
+        min-height: 40vw;
     }
+
+    .art-small>.buttons>button {
+        padding: 0;
+        width: 8vw;
+        height: 8vw;
+    }
+
+    .art-small>p {
+        font-size: 3vw;
+        max-height: 25vw;
+    }
+
+    #btn-gallery {
+        font-size: 8vw;
+    }
+
     #btnright,
     #btnleft {
-        font-size: 2.5vw;
-        width:4vw;
+        font-size: 5vw;
+        width: 7vw;
     }
 
     #navbar ul li a {
-        font-size: 1.8vw;
+        padding: 1.5vw;
+        border-radius: 3vw;
+        font-size: 5vw;
+    }
+
+    #navbar h1 {
+        letter-spacing: 1.5vw;
+        font-size: 8vw;
+        margin: 4vw;
     }
 }

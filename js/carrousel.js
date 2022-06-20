@@ -73,7 +73,7 @@ function move(cid, imagecontainer, autoswitch, dir, timer) {
         }
     });
 
-    if (autoswitch) window.setInterval(changeImage, timer, carrousel, dir, maxpos, imagewidth); //if the script is called with the autoswitch on , the run this function on an interval.
+    if (autoswitch)  window.setInterval(changeImage, timer, carrousel, dir, maxpos, imagewidth); //if the script is called with the autoswitch on , the run this function on an interval.
     else {
         changeImage(carrousel, dir, maxpos, imagewidth); //else only run it once5
     }

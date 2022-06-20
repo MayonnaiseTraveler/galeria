@@ -1,6 +1,8 @@
 # TODO:
 * - [ ] image title 
-* - [ ] iamge with 100% width when on one column mode
-* - [ ] more mobile optimization
+* - [x] iamge with 100% width when on one column mode
+* - [ ] fix footer
+* - [x] more mobile optimization
 * - [ ] lazy loading for performance??
 * - [ ] dark theme button?
+* - [ ] buttons for moving between images on column mode

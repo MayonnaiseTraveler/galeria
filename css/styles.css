@@ -527,6 +527,16 @@ header {
     body {
         margin: 0;
     }
+    footer{
+        padding:1vw;
+    }
+    footer>section{
+        margin:0 1vw;
+    }
+    footer>section>ul>li{
+        text-align: left;
+        font-size:3vw;
+    }
 
     main>article,
     main>header,

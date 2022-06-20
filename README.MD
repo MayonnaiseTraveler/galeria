@@ -3,7 +3,6 @@
 * - [ ] Add missing text
 * - [ ] add image alts
 * - [ ] image title?
-* - [ ] fix footer
 
 # Unecessary
 * - [ ] lazy loading for performance??
@@ -12,6 +11,7 @@
 
 # DONE:
 
+* - [x] fix footer
 * - [x] Reorganize Css and add comments
 * - [x] Reorganize JS
 * - [x] more mobile optimization
